@@ -1,4 +1,4 @@
-# NIST CSF incident response
+# NIST CSF incident response for ICMP flooding attack
 
 ## 📑 Table of contents
 
@@ -12,7 +12,7 @@
 
 ## 👋 Introduction <a name="introduction">
 
-Studi ini disusun sebagai bagian dari latihan cybersecurity yang berfokus pada analisis insiden jaringan dan penulisan laporan keamanan siber. Skenario yang digunakan menggambarkan sebuah organisasi multimedia yang mengalami gangguan layanan akibat serangan denial of service, sehingga sistem internal tidak dapat diakses dalam waktu tertentu. Alur kejadian, dampak terhadap operasional, dan respons awal organisasi dijabarkan secara runtut agar mudah dipahami.
+Studi ini disusun sebagai bagian dari latihan cybersecurity yang berfokus pada analisis insiden jaringan dan penulisan laporan keamanan siber. Skenario yang digunakan menggambarkan sebuah organisasi multimedia yang mengalami gangguan layanan akibat serangan Denial of Service (DoS), sehingga sistem internal tidak dapat diakses dalam waktu tertentu. Alur kejadian, dampak terhadap operasional, dan respons awal organisasi dijabarkan secara runtut agar mudah dipahami.
 
 Pembahasan mengacu pada materi dari program Google Cybersecurity Professional Certificate dengan pendekatan NIST Cybersecurity Framework (CSF). Kerangka ini digunakan untuk membantu mengenali risiko, melindungi aset penting, mendeteksi insiden lebih cepat, menyusun respons yang tepat, dan merencanakan proses pemulihan. Studi ini bertujuan menunjukkan bagaimana NIST CSF dapat diterapkan secara praktis untuk mengelola insiden jaringan dan meningkatkan kesiapan organisasi menghadapi ancaman serupa di masa depan.
 
@@ -47,7 +47,7 @@ Tujuan utama dari kegiatan ini meliputi:
 - Menentukan jenis serangan yang terjadi serta layanan dan sistem jaringan yang terdampak
 - Menilai kelemahan konfigurasi keamanan, terutama pada firewall dan sistem pemantauan trafik
 - Mengelompokkan langkah pengamanan berdasarkan fungsi Identify, Protect, Detect, Respond, dan Recover dalam NIST CSF
-- Menyusun rekomendasi kontrol keamanan jaringan untuk mencegah serangan DoS serupa di kemudian hari
+- Menyusun rekomendasi kontrol keamanan jaringan untuk mencegah serangan Denial of Service (DoS) serupa di kemudian hari
 - Meningkatkan kesiapan organisasi dalam mendeteksi, menangani, dan memulihkan diri dari insiden jaringan
 
 Tujuan ini menjadi landasan dalam penyusunan laporan insiden dan rencana peningkatan keamanan jaringan yang tidak hanya fokus pada penanganan sesaat, tetapi juga bersifat pencegahan dan berorientasi jangka panjang.
@@ -84,7 +84,7 @@ Dokumentasi kebijakan keamanan jaringan menjadi bagian penting dari upaya penceg
 
 Memperbaiki kemampuan deteksi insiden di masa yang akan datang, organisasi perlu memantau lalu lintas jaringan secara konsisten dan berkelanjutan. Penggunaan perangkat lunak pemantauan jaringan menjadi langkah awal yang penting, terutama untuk mengenali pola trafik yang tidak wajar, seperti lonjakan paket ICMP dari sumber eksternal dalam jumlah besar. Pendekatan ini membantu tim keamanan menangkap tanda awal serangan sebelum gangguan meluas ke layanan utama.
 
-Penerapan sistem IDS/IPS juga berperan besar dalam proses deteksi. Sistem ini bekerja secara otomatis untuk mengenali dan menyaring lalu lintas yang mencurigakan. Aturan dan signature yang diperbarui secara rutin memungkinkan IDS/IPS mengenali pola serangan DoS berbasis ICMP dan mengirimkan peringatan lebih cepat kepada tim keamanan. Proses identifikasi insiden pun dapat dilakukan tanpa menunggu gangguan menjadi lebih parah.
+Penerapan sistem IDS/IPS juga berperan besar dalam proses deteksi. Sistem ini bekerja secara otomatis untuk mengenali dan menyaring lalu lintas yang mencurigakan. Aturan dan signature yang diperbarui secara rutin memungkinkan IDS/IPS mengenali pola serangan Denial of Service (DoS) berbasis ICMP dan mengirimkan peringatan lebih cepat kepada tim keamanan. Proses identifikasi insiden pun dapat dilakukan tanpa menunggu gangguan menjadi lebih parah.
 
 Pencatatan log secara terpusat perlu diterapkan pada seluruh perangkat jaringan, termasuk firewall, router, dan server. Analisis log yang dilakukan secara rutin membantu menemukan anomali, menelusuri sumber serangan, dan menyediakan data yang dibutuhkan saat investigasi lanjutan. Kombinasi pemantauan real-time, IDS/IPS, dan pengelolaan log yang rapi akan membuat kemampuan deteksi insiden jaringan menjadi jauh lebih kuat dan andal.
 
@@ -98,7 +98,7 @@ Proses eskalasi dijalankan dengan melibatkan tim manajemen insiden dan pemangku 
 
 ### Recover
 
-Ketika serangan DoS berhasil dikendalikan, organisasi menjalankan proses pemulihan untuk mengembalikan sistem dan layanan jaringan ke kondisi normal secara aman dan terukur. Fokus awal diarahkan pada memastikan seluruh aktivitas berbahaya sudah benar-benar berhenti dan tidak ada lagi lalu lintas ICMP mencurigakan yang masuk ke jaringan.
+Ketika serangan Denial of Service (DoS) berhasil dikendalikan, organisasi menjalankan proses pemulihan untuk mengembalikan sistem dan layanan jaringan ke kondisi normal secara aman dan terukur. Fokus awal diarahkan pada memastikan seluruh aktivitas berbahaya sudah benar-benar berhenti dan tidak ada lagi lalu lintas ICMP mencurigakan yang masuk ke jaringan.
 
 Layanan jaringan yang sebelumnya dihentikan dipulihkan secara bertahap, dimulai dari layanan yang paling penting bagi operasional bisnis. Setiap tahap pemulihan disertai pemantauan performa jaringan dan stabilitas sistem agar potensi gangguan lanjutan atau serangan ulang dapat segera terdeteksi. Konfigurasi firewall, IDS/IPS, dan sistem monitoring yang telah diperbarui diuji kembali untuk memastikan perlindungan berjalan sesuai kebijakan keamanan.
 
@@ -108,7 +108,7 @@ Proses pemulihan yang terstruktur dan berbasis pembelajaran membantu organisasi 
 
 ### Reflection
 
-Serangan DoS yang terjadi memperlihatkan bahwa kesalahan konfigurasi firewall bisa berdampak besar pada stabilitas jaringan organisasi. Ketiadaan pembatasan dan validasi lalu lintas ICMP memberi celah bagi aktor jahat untuk membanjiri jaringan hingga layanan internal tidak lagi berjalan normal. Kondisi ini menunjukkan bahwa kontrol keamanan dasar yang diabaikan sering kali menjadi pintu masuk utama serangan jaringan.
+Serangan Denial of Service (DoS) yang terjadi memperlihatkan bahwa kesalahan konfigurasi firewall bisa berdampak besar pada stabilitas jaringan organisasi. Ketiadaan pembatasan dan validasi lalu lintas ICMP memberi celah bagi aktor jahat untuk membanjiri jaringan hingga layanan internal tidak lagi berjalan normal. Kondisi ini menunjukkan bahwa kontrol keamanan dasar yang diabaikan sering kali menjadi pintu masuk utama serangan jaringan.
 
 Analisis menggunakan NIST Cybersecurity Framework membantu organisasi melihat kebutuhan keseimbangan antara pencegahan, deteksi, dan respons. Insiden ini menegaskan peran penting perlindungan teknis seperti firewall dan IDS/IPS, sekaligus menyoroti perlunya pemantauan berkelanjutan dan kesiapan tim saat menghadapi insiden. Respons yang cepat mampu menekan durasi gangguan, meski kesiapan awal dan deteksi dini masih perlu diperkuat.
 
