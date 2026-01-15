@@ -12,7 +12,7 @@
 
 ## 👋 Introduction <a name="introduction">
 
-Studi ini disusun sebagai bagian dari latihan cybersecurity yang berfokus pada analisis insiden jaringan dan penulisan laporan keamanan siber. Skenario yang digunakan menggambarkan sebuah organisasi multimedia yang mengalami gangguan layanan akibat serangan Denial of Service (DoS), sehingga sistem internal tidak dapat diakses dalam waktu tertentu. Alur kejadian, dampak terhadap operasional, dan respons awal organisasi dijabarkan secara runtut agar mudah dipahami.
+Studi ini disusun sebagai bagian dari portofolio cybersecurity yang berfokus pada analisis insiden jaringan dan penulisan laporan keamanan siber. Skenario yang digunakan menggambarkan sebuah organisasi multimedia yang mengalami gangguan layanan akibat serangan Denial of Service (DoS), sehingga sistem internal tidak dapat diakses dalam periode tertentu. Alur kejadian, dampak terhadap operasional, serta respons awal organisasi dijelaskan secara runtut agar mudah dipahami.
 
 Pembahasan disusun berdasarkan pembelajaran saya di program Google Cybersecurity Professional Certificate, khususnya pada course Connect and Protect: Networks and Network Security. Pendekatan NIST Cybersecurity Framework (CSF) digunakan sebagai kerangka analisis untuk mengenali risiko, melindungi aset penting, meningkatkan kemampuan deteksi, menyusun respons insiden, serta merencanakan proses pemulihan. Studi ini menunjukkan penerapan NIST CSF secara praktis dalam pengelolaan insiden jaringan sekaligus membantu meningkatkan kesiapan organisasi menghadapi ancaman serupa di masa depan.
 
